@@ -1,0 +1,27 @@
+;; Music vars
+(deflisten INFO :initial "{\"status\": \"Pause\",\"positon\":\"0\", \"length\":\"1\"}" `playerctl -a metadata -p musicfox,yesplaymusic,firefox --format '{"status": "{{status}}","title": "{{markup_escape(title)}}","artist": "{{artist}}","url": "{{mpris:artUrl}}", "position":"{{position}}","length":"{{mpris:length}}","ctime":"{{duration(position)}}", "atime":"{{duration(mpris:length)}}" }' -F`)
+(deflisten COVER :initial "images/music.png" `/usr/bin/bash scripts/cover_get 2> /dev/null`)
+
+
+;; Music
+(defwidget music [] 
+	(box :class "genwin" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+
+		(button :class "album_art" :vexpand "false" :hexpand "false" :onclick "/home/xiao/Scripts/musicfox.sh &" :onrightclick "imv /tmp/.music_cover.jpg &" :style "background-image: url('${COVER}');")
+
+		(box :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(label :tooltip {INFO["title"]} :halign "center" :class "song" :wrap "true" :limit-width 20 :text {INFO["title"]})
+			(label :tooltip {INFO["artist"]} :halign "center" :class "artist" :wrap "true" :limit-width 15 :text {INFO["artist"]})
+
+			(box :orientation "h" :spacing 20 :halign "center" :space-evenly "true" :vexpand "false" :hexpand "false" 
+				(button :class "btn_prev" :onclick "playerctl previous -p musicfox,yesplaymusic,firefox" "󰼨")
+				(button :class "btn_play" :onclick "playerctl play-pause -p musicfox,yesplaymusic,firefox" {INFO["status"] == "Playing" ? "󰏤" : "󰐊"})
+				(button :class "btn_next" :onclick "playerctl next -p musicfox,yesplaymusic,firefox" "󰼧"))
+
+			(box :orientation "v" :class "music_bar" :halign "center" :vexpand "false" :hexpand "false" 
+				(scale :onscroll "echo next" :min 0 :active "true" :max 100 :value {INFO["position"] / INFO["length"] * 100 })
+                (label :class "progress_bar" :text "${INFO["ctime"]}  /  ${INFO["atime"]}" )))))
+
+
+
+

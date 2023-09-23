@@ -1,0 +1,6 @@
+run-always_parse_args=true
+insensitive=true
+term=alacritty
+width=1000
+height=500
+normal_window=true

@@ -1,0 +1,63 @@
+/** System ********************************************/
+.iconcpu,
+.iconmem,
+.iconbright,
+.iconvolume,
+.iconbat {
+  font-size: 28px;
+  font-weight: normal;
+}
+.iconcpu {
+  color: #bf616a;
+}
+.iconmem {
+  color: #a3be8c;
+}
+.iconbright {
+  color: #ebcb8b;
+}
+.iconvolume {
+  color: #ffab91;
+}
+.iconbat {
+  color: #88c0d0;
+}
+
+.cpu_bar,
+.mem_bar,
+.bright_bar,
+.bat_bar,
+.volume_bar,
+scale trough {
+  all: unset;
+  background-color: #3a404c;
+  border-radius: 16px;
+  min-height: 28px;
+  min-width: 240px;
+}
+
+.cpu_bar,
+.mem_bar,
+.bright_bar,
+.bat_bar,
+.volume_bar,
+scale trough highlight {
+  all: unset;
+  border-radius: 16px;
+}
+
+.cpu_bar scale trough highlight {
+  background-color: #bf616a;
+}
+.mem_bar scale trough highlight {
+  background-color: #a3be8c;
+}
+.bright_bar scale trough highlight {
+  background-color: #ebcb8b;
+}
+.volume_bar scale trough highlight {
+  background-color: #ffab91;
+}
+.bat_bar scale trough highlight {
+  background-color: #88c0d0;
+}

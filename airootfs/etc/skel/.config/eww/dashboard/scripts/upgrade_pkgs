@@ -1,0 +1,18 @@
+#!/bin/bash
+
+checkupdates | column -t | ccze -A
+sudo pacman -Syu
+
+exit_status=$?
+if [ $exit_status -eq 0 ];then
+    eww -c ~/.config/eww/dashboard update PKGS=0
+fi
+
+# Display a message
+echo "Press any key to exit..."
+
+# Wait for the user to press a key
+read -n 1 -s
+
+# Exit the script
+exit 0

@@ -1,0 +1,13 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Type = Package
+Target = util-linux
+
+[Action]
+Description = Set timezone to Shanghai and running hwclock...
+When = PostTransaction
+Depends = util-linux
+Depends = coreutils
+Depends = sh
+Exec = /bin/sh -c "/usr/bin/ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && /usr/bin/hwclock --systohc"

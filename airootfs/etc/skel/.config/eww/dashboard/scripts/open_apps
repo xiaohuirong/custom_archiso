@@ -1,0 +1,31 @@
+#!/bin/bash
+
+## Open Applications
+if [[ "$1" == "--ff" ]]; then
+	firefox &
+
+elif [[ "$1" == "--tg" ]]; then
+	telegram-desktop &
+
+elif [[ "$1" == "--dc" ]]; then
+	discord &
+
+elif [[ "$1" == "--tr" ]]; then
+	alacritty --working-directory ~ &
+
+elif [[ "$1" == "--fm" ]]; then
+	nautilus ~ &
+
+elif [[ "$1" == "--ge" ]]; then
+	geany &
+
+elif [[ "$1" == "--cd" ]]; then
+	code &
+
+elif [[ "$1" == "--gp" ]]; then
+	gimp &
+
+elif [[ "$1" == "--vb" ]]; then
+	virt-manager &
+
+fi

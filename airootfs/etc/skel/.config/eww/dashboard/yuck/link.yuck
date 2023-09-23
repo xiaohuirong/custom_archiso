@@ -1,0 +1,31 @@
+;; Apps vars
+(defpoll PKGS :interval "1h" `checkupdates | wc -l`)
+
+
+;; github
+(defwidget github [] 
+	(box :class "link-github" :vexpand "false" :hexpand "false" 
+		(button :class "iconweb" :onclick "scripts/open_links --gh" "󰊤")))
+
+;; reddit
+(defwidget reddit [] 
+	(box :class "link-reddit" :vexpand "false" :hexpand "false" 
+		(button :class "iconweb" :onclick "scripts/open_links --rd" "󰑍")))
+
+;; twitter
+(defwidget twitter [] 
+	(box :class "link-twitter" :vexpand "false" :hexpand "false" 
+		(button :class "iconweb" :onclick "scripts/open_links --tw" "󰕄")))
+
+;; youtube
+(defwidget youtube [] 
+	(box :class "link-youtube" :vexpand "false" :hexpand "false" 
+		(button :class "iconweb" :onclick "scripts/open_links --yt" "󰗃")))
+
+;; mail
+(defwidget mail [] 
+	(box :class "link-mail" 
+		(box :orientation "h" :halign "center" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconmail" :onclick "xfce4-terminal --command='/home/xiao/.config/eww/dashboard/scripts/upgrade_pkgs' &" "󰣇")
+			(box :class "mailbox" :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(button :class "label_mails" :onclick "xfce4-terminal --command='/home/xiao/.config/eww/dashboard/scripts/upgrade_pkgs' &" PKGS)))))

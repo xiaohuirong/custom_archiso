@@ -1,0 +1,26 @@
+#!/bin/sh
+Selection=true
+
+export BROWSER=firefox
+#export GTK_THEME=Adwaita:dark
+export GTK_THEME=Adwaita-dark
+#export GTK_THEME=Tokyonight-Storm-B
+export EDITOR=vim
+export QT_QPA_PLATFORMTHEME=qt5ct
+export LANG=zh_CN.UTF-8
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM="wayland;xcb"
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface font-name "DejaVuSansM Nerd Font Mono Regular 14"
+gsettings set org.gnome.desktop.interface cursor-theme "oreo_pink_cursors"
+gsettings set org.gnome.desktop.interface cursor-size "25"
+gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal "xfce4-terminal"
+gsettings set org.gnome.gedit.preferences.editor tabs-size 4
+gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
+gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
+
+
+exec dbus-launch $@
+

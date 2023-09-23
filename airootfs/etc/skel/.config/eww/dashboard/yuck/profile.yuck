@@ -1,0 +1,15 @@
+;; Profile vars
+(defvar IMAGE "images/profile.jpg")
+(defvar NAME "Hoream")
+(defpoll UNAME :interval "5m" `whoami`)
+
+;; profile
+(defwidget user [] 
+	(box :class "genwin" :orientation "v" :spacing 35 :space-evenly "false" :vexpand "false" :hexpand "false"
+		(box :style "background-image: url('${IMAGE}');" :class "face" :halign "center")
+		(label :class "fullname" :halign "center" :wrap "true" :limit-width 25 :text NAME)
+		(label :class "username" :halign "center" :wrap "true" :limit-width 25 :text UNAME)))
+
+
+
+

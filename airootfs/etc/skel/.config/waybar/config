@@ -1,0 +1,206 @@
+[{
+    "name": "bottom",
+    "layer": "top",
+    "margin": "0px 0px 0px 0px",
+    "position": "left",
+
+    "modules-right": ["custom/previous", "custom/next", "custom/mpris", "network#ethernet", "network#wifi", "clock",  "battery", "memory", "cpu", "disk", "temperature", "tray"],
+
+    "modules-left": ["custom/logo", "wlr/taskbar"],
+
+    "network#wifi": {
+        "interface": "wlp1s0",
+        "interval": 3,
+        "format": "󰤭",
+        "format-wifi": "󱚽",
+        "format-disconnected": "󰤭", //An empty format will hide the module.
+        "tooltip-format-wifi": "󱚽 {essid}@{frequency}GHz ({signalStrength}%)\n󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center wifi",
+        "on-click-right": "nm-connection-editor",
+    },
+
+    "network#ethernet": {
+        "interface": "enp0s20f0u6u1c2",
+        "interval": 3,
+        "format": "󰈂",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰈂", //An empty format will hide the module.
+        "tooltip-format-ethernet": "󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center network",
+        "on-click-right": "nm-connection-editor",
+    },
+
+    "battery": {
+        "format": "{capacity}",
+        // "format-icons": ["", "", "", ""], 
+        "format-charging": "{capacity}",
+        "interval": 30,
+        "on-click": "gnome-control-center power",
+        "states": {
+            "full": 100,
+            "closefull": 99,
+            "warning": 45,
+            "critical": 20
+        }
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 27,
+        // "icon-theme": "Yaru",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-click-right": "minimize",
+        "ignore-list": [ 
+           "wofi" 
+        ], 
+        "app_ids-mapping": {
+          "firefoxdeveloperedition": "firefox-developer-edition"
+        }
+    },
+
+    "clock": {
+            "format": "{:%H\n%M}",
+            "tooltip-format": "{calendar}",
+            "calendar": {
+                "mode-mon-col"  : 4,
+                "format": {
+                    "months":     "<span size='18pt' color='#ffead3'><b>{}</b></span>",
+                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                    "weekdays":   "<span font-family='LXGW WenKai' size='22pt' color='#ffcc66'><b>{}</b></span>",
+                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    }
+            },
+
+        },
+
+    "custom/logo": {
+        "format": "{icon}",
+        "format-icons": "",
+        "on-click-right": "~/Scripts/launcher.sh",
+        "on-click": "wtype -s 50 -k super_r",
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲", // an empty format will hide the module
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueberry",
+    },
+
+    "custom/mpris": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "",
+        },
+        "exec": "playerctl -a metadata -p musicfox,yesplaymusic,kdeconnect,firefox --format '{\"tooltip\": \"󰐌 {{playerName}}\\n󰎆 {{markup_escape(title)}}\\n󰀥 {{markup_escape(album)}}\\n󰀉 {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause -p musicfox,yesplaymusic,kdeconnect,firefox",
+        "on-click-right": "playerctl next -p musicfox,yesplaymusic,kdeconnect,firefox", 
+    },
+
+    "custom/light": {
+        "format": "{icon}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "",
+        },
+        "interval": 3600,
+        "exec": "~/Scripts/aaa.sh",
+        "on-click": "~/Scripts/aaa.sh",
+    },
+
+    "custom/next": {
+        "format": "{icon}",
+        "format-icons": "󰙡",
+        "on-click": "playerctl next -p musicfox,yesplaymusic,kdeconnect,firefox"
+    },
+
+    "custom/previous": {
+        "format": "{icon}",
+        "format-icons": "󰙣",
+        "on-click": "playerctl previous -p musicfox,yesplaymusic,kdeconnect,firefox"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt-click": "click-right",
+        "format-bluetooth": "󰗾",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "󰋋",
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "{volume}",
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "helvum",
+        "states": {
+            "low": 0,
+            "mid":50,
+            "high": 75
+        }
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛",
+        "format-alt-click": "click-right",
+        "on-click": "~/.config/waybar/custom/stats.sh",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "",
+        "tooltip-format": "{used:0.1f}G used\n{avail:0.1f}G available\n{total:0.1f}G total",
+        "format-alt-click": "click-right",
+        "on-click": "~/.config/waybar/custom/stats.sh",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "󰨣",
+        "format-alt-click": "click-right",
+        "tooltip-format": "{used} used\n{free} free\n{total} total",
+        "on-click": "~/.config/waybar/custom/disk_stats.sh",
+        "path": "/",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "temperature": {
+        "format": "",
+        "critical-threshold": 80
+    },
+
+    "tray": {
+        "icon-size": 27,
+        "spacing": 8,
+        "show-passive-items": true
+    }
+
+}]
+

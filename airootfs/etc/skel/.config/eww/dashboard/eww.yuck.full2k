@@ -1,0 +1,142 @@
+(include "./yuck/clock.yuck")
+(include "./yuck/uptime.yuck")
+(include "./yuck/power.yuck")
+(include "./yuck/weather.yuck")
+(include "./yuck/profile.yuck")
+(include "./yuck/system.yuck")
+(include "./yuck/music.yuck")
+(include "./yuck/link.yuck")
+(include "./yuck/app.yuck")
+(include "./yuck/folder.yuck")
+
+;; clock
+(defwindow clock 
+        :stacking "bottom" 
+        :focusable "false" 
+        :monitor 0
+	    :geometry (geometry :x 687 :y 200 :width 467 :height 207)
+		(clock))
+
+
+;; uptime
+(defwindow uptime 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 687 :y 427 :width 467 :height 207)
+		(uptime))
+
+;; logout
+(defwindow logout 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 1927 :y 200 :width 207 :height 207)
+					(logout))
+
+;; sleep
+(defwindow sleep 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 2153 :y 200 :width 207 :height 207)
+					(sleep))
+
+;; reboot
+(defwindow reboot 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0
+	    :geometry (geometry :x 1927 :y 427 :width 207 :height 207)
+					(reboot))
+
+;; poweroff
+(defwindow poweroff 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 2153 :y 427 :width 207 :height 207)
+					(poweroff))
+
+;; weather
+(defwindow weather 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0
+	    :geometry (geometry :x 1173 :y 200 :width 733 :height 433)
+					(weather))
+
+;; profile
+(defwindow profile 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0
+	    :geometry (geometry :x 200 :y 200 :width 467 :height 587)
+					(user))
+
+;; system
+(defwindow system 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 200 :y 807 :width 467 :height 433)
+					(system))
+;; music
+(defwindow music 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0
+	    :geometry (geometry :x 687 :y 653 :width 813 :height 373)
+					(music))
+
+;; github
+(defwindow github 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 687 :y 1047 :width 188 :height 193)
+					(github))
+
+;; reddit
+(defwindow reddit 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 895 :y 1047 :width 188 :height 193)
+					(reddit))
+
+;; twitter
+(defwindow twitter 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 1103 :y 1047 :width 188 :height 193)
+					(twitter))
+
+;; youtube
+(defwindow youtube 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 1311 :y 1047 :width 189 :height 193)
+					(youtube))
+
+;; mail
+(defwindow mail 
+        :stacking "bg" 
+        :focusable "false" :monitor 0 
+	    :geometry (geometry :x 1520 :y 1047 :width 387 :height 193)
+					(mail))
+;; apps
+(defwindow apps :stacking "bg" :focusable "false" :monitor 0 
+	    :geometry (geometry :x 1520 :y 653 :width 387 :height 373)
+					(apps))
+
+;; folders
+(defwindow folders 
+        :stacking "bg" 
+        :focusable "false" 
+        :monitor 0 
+	    :geometry (geometry :x 1927 :y 653 :width 433 :height 587)
+					(folders))
+

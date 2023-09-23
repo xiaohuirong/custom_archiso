@@ -1,0 +1,15 @@
+/** Global *******************************************/
+* {
+  all: unset;
+  font-family: DejaVuSansM Nerd Font Propo, icomoon-feather;
+}
+
+/** Generic window ***********************************/
+.genwin {
+  background-color: #2e3440;
+  opacity: 0.8;
+  border-radius: 16px;
+}
+
+@import "./scss/bg.scss", "./scss/clock.scss", "./scss/uptime.scss", "./scss/power.scss","./scss/weather.scss","./scss/profile.scss", "./scss/system.scss", "./scss/music.scss", "./scss/link.scss", "./scss/app.scss", "./scss/folder.scss";
+

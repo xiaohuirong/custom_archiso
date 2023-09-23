@@ -1,0 +1,39 @@
+;; System vars
+;; (defpoll HOST :interval "60s" `hostname`)
+(defpoll CPU_USAGE :interval "3s" `scripts/sys_info --cpu`)
+(defpoll MEM_USAGE :interval "3s" `scripts/sys_info --mem`)
+(deflisten BLIGHT :initial "50" `tail -f /run/user/1000/light.sock`)
+(defpoll BATTERY :interval "60s" `scripts/sys_info --bat`)
+(deflisten AUDIO :initial "0" "tail -f /run/user/1000/audio.sock")
+
+
+;; system
+(defwidget system [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(box :orientation "v" :spacing 35 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false" 
+
+			(box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconcpu" :text "󰻠")
+				(scale :tooltip "${CPU_USAGE}%":min 0 :max 100 :value CPU_USAGE :active "false"))
+
+			(box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconmem" :text "󰘚")
+				(scale :tooltip "${MEM_USAGE}%" :min 0 :max 100 :value MEM_USAGE :active "false"))
+
+			(box :class "bright_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconbright" :text "󰖙")
+				(scale :tooltip "${BLIGHT}%" :min 0 :max 100 :value BLIGHT :onchange "scripts/control_light.sh {}" ))
+
+            (box :class "volume_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+                (label :class "iconvolume" :text "󰕾")
+                (scale :tooltip "${AUDIO}%" :min 0 :max 100 :value AUDIO :onchange "amixer -D pulse sset Master {}% | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' > /run/user/1000/audio.sock" ))
+
+
+			(box :class "bat_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconbat" :text "󰁹")
+				(scale :tooltip "${BATTERY}%" :min 0 :max 100 :value BATTERY :active "false")))))
+            
+
+
+
+

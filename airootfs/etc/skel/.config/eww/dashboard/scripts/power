@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ "$1" = "shutdown" ]
+then
+    zenity --question --text="关闭ArchLinux"
+    if [ "$?" = 0 ]
+    then
+        systemctl poweroff
+    fi
+elif [ "$1" = "reboot" ]
+then
+    zenity --question --text="重启ArchLinux"
+    if [ "$?" = 0 ]
+    then
+        systemctl reboot
+    fi
+elif [ "$1" = "suspend" ]
+then
+    zenity --question --text="挂起ArchLinux"
+    if [ "$?" = 0 ]
+    then
+        systemctl suspend
+    fi
+elif [ "$1" = "logout" ]
+then
+    zenity --question --text="退出窗口管理器"
+    if [ "$?" = 0 ]
+    then
+        loginctl terminate-user $USER
+    fi
+fi

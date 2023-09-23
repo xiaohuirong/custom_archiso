@@ -1,0 +1,32 @@
+;; Files vars
+(defpoll FREE :interval "5s" `df -h / | awk '{print $4}' | tail -n 1 | sed 's/G/GB/'`)
+
+;; folders
+(defwidget folders [] 
+	(box :class "genwin" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
+		(box :class "hddbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(box :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :class "hddicon" :onclick "scripts/open_apps --fm" "󰋊")
+				(label :class "fs_sep" :text "|"))
+			(box :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "hdd_label" :wrap "true" :limit-width 25 :text FREE)))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder1" :onclick "nautilus ~/Documents &" "󰉋")
+			(button :class "label_folder1" :onclick "nautilus ~/Documents &" "Documents"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder2" :onclick "nautilus ~/Downloads &" "󱧨")
+			(button :class "label_folder2" :onclick "nautilus ~/Downloads &" "Downloads"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder3" :onclick "nautilus ~/Music &" "󱍙")
+			(button :class "label_folder3" :onclick "nautilus ~/Music &" "Music"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder4" :onclick "nautilus ~/Pictures &" "󰉏")
+			(button :class "label_folder4" :onclick "nautilus ~/Pictures &" "Pictures"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder5" :onclick "nautilus ~/.config &" "󱁿")
+			(button :class "label_folder5" :onclick "nautilus ~/.config &" "~/.config"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder6" :onclick "nautilus ~/.local &" "󰚝")
+			(button :class "label_folder6" :onclick "nautilus ~/.local &" "~/.local"))))
+
+

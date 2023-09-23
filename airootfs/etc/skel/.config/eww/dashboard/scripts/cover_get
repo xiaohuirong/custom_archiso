@@ -1,0 +1,43 @@
+#!/bin/bash
+
+url_old=""
+url=""
+COVER="/tmp/.music_cover.jpg"
+# sleep_time=10
+
+playerctl -a metadata -p musicfox,yesplaymusic,firefox --format '{{mpris:artUrl}}' -F |
+	while read meta; do
+		url=$(echo $meta | grep -E "^(https|http)://.*.jpg" -o)
+		if [ "$url_old" != "$url" ]; then
+			if [ "$url" == "" ]; then
+				echo "images/music.png"
+			else
+				curl $url -o ${COVER} > /dev/null
+				echo $COVER
+			fi
+			url_old=$url
+		fi
+
+	done
+
+# while true
+# do
+#     url=$(playerctl -a metadata -p musicfox,yesplaymusic,kdeconnect,firefox --format '{{mpris:artUrl}}' | grep -E "^(https|http)://.*.jpg" -o)
+#
+#     if [ "$url_old" != "$url" ]
+#     then
+#         if [ "$url" == "" ]
+#         then
+# 		    echo "images/music.png"
+#             sleep_time=10
+#         else
+#             curl $url -o ${COVER} > /dev/null
+#             echo $COVER
+#            # sleep_time=2
+#         fi
+#         url_old=$url
+#     fi
+#
+#     #sleep $sleep_time
+#
+# done

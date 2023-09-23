@@ -1,0 +1,72 @@
+#!/bin/bash
+
+## Files and cmd
+FILE="$HOME/.cache/eww_launch.dashboard"
+CFG="$HOME/.config/eww/dashboard"
+EWW=`which eww`
+
+dp=$(cat /sys/class/drm/card1-DP-1/enabled)
+echo $dp
+
+if [ "$dp" = "enabled" ]
+then
+    ln -sf ~/.config/eww/dashboard/eww.yuck.2k ~/.config/eww/dashboard/eww.yuck
+    LIGHT=$(/usr/bin/monitor-control DP-1 0x10 | awk '{print $1}')
+
+else
+    ln -sf ~/.config/eww/dashboard/eww.yuck.1k ~/.config/eww/dashboard/eww.yuck
+    LIGHT=$(light | awk '{split($1, arr, "."); print arr[1]}')
+fi
+
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} -c $CFG daemon
+    rm $FILE
+	sleep 1
+fi
+
+## Open widgets 
+run_eww() {
+    rm -f /run/user/1000/light.sock
+    mkfifo /run/user/1000/light.sock
+
+    rm -f /run/user/1000/audio.sock
+    mkfifo /run/user/1000/audio.sock
+
+	${EWW} --config "$CFG" open-many \
+		   profile \
+		   system \
+		   clock \
+		   uptime \
+		   music \
+		   github \
+		   reddit \
+		   twitter \
+		   youtube \
+		   weather \
+		   apps \
+		   mail \
+		   logout \
+		   sleep \
+		   reboot \
+		   poweroff \
+		   folders
+
+    # initiate backlight and audio value
+    echo $LIGHT > /run/user/1000/light.sock
+    amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' > /run/user/1000/audio.sock
+}
+
+## Launch or close widgets accordingly
+if [[ ! -f "$FILE" ]]; then
+	touch "$FILE"
+	run_eww
+else
+	${EWW} --config "$CFG" close \
+					profile system clock uptime music github \
+					reddit twitter youtube weather apps mail logout sleep reboot poweroff folders 
+	rm "$FILE"
+    rm -f /run/user/1000/light.sock
+    rm -f /run/user/1000/audio.sock
+fi

@@ -1,0 +1,24 @@
+:root {
+  --uc-urlbar-width: clamp(250px, 50vw, 600px);
+  --tab-min-height: 30px !important; 
+  --tab-max-height: 30px !important;
+  --urlbar-min-height: 34px !important;
+  --urlbar-max-height: 34px !important;
+}
+
+/* transition to oneline
+*/
+@media (min-width: 1000px) {
+  /* move tabs bar over */
+  #TabsToolbar {
+    margin-left: var(--uc-urlbar-width) !important;
+  }
+
+  /* move entire nav bar  */
+  #nav-bar {
+    margin: calc((var(--urlbar-min-height) * -1))
+      calc(100vw - var(--uc-urlbar-width)) 0 0 !important;
+    min-height: var(--tab-min-height) !important;
+    max-height: var(--tab-max-height) !important;
+  }
+} /* end media query */
