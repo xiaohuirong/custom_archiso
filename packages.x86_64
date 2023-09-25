@@ -243,5 +243,9 @@ mpd
 go-musicfox-git
 okular
 evince
+vnote
+
+# install tool
+calamares
 
 ############### custom ###############
