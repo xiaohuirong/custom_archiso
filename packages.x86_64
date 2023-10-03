@@ -245,6 +245,9 @@ okular
 evince
 vnote
 
+# grub
+grub-theme-vimix
+
 # install tool
 calamares
 
