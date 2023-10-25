@@ -254,4 +254,7 @@ grub-theme-vimix
 # install tool
 #calamares
 
+# share clipboard
+spice-vdagent
+
 ############### custom ###############
