@@ -8,8 +8,11 @@ export GTK_THEME=Adwaita-dark
 export EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 export LANG=zh_CN.UTF-8
-export MOZ_ENABLE_WAYLAND=1
-export QT_QPA_PLATFORM="wayland;xcb"
+
+if [ "$1" = "wayfire" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+    export QT_QPA_PLATFORM="wayland;xcb"
+fi
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface font-name "DejaVuSansM Nerd Font Mono Regular 14"
