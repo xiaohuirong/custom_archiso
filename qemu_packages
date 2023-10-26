@@ -1,0 +1,14 @@
+base 
+linux 
+btrfs-progs 
+sudo 
+vim 
+grub 
+arch-install-scripts 
+networkmanager 
+man-db 
+man-pages 
+texinfo 
+openssh 
+zsh 
+ppp
