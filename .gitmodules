@@ -1,0 +1,9 @@
+[submodule "airootfs/etc/skel/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = airootfs/etc/skel/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "airootfs/etc/skel/.vim/plugged/vim-wayland-clipboard"]
+	path = airootfs/etc/skel/.vim/plugged/vim-wayland-clipboard
+	url = https://github.com/jasonccox/vim-wayland-clipboard.git
+[submodule "airootfs/etc/skel/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = airootfs/etc/skel/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

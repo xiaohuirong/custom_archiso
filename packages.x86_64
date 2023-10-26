@@ -168,6 +168,10 @@ lazygit
 rar
 unzip
 useful-scripts-git
+pueue
+
+# network tools
+rustscan
 
 # font
 ttf-lxgw-wenkai
