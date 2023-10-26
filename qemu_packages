@@ -12,3 +12,11 @@ texinfo
 openssh 
 zsh 
 ppp
+net-tools
+
+# other mirrors 
+archlinuxcn-keyring
+archoream-keyring
+
+# colorful ouput
+grc
