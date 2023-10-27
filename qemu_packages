@@ -13,6 +13,7 @@ openssh
 zsh 
 ppp
 net-tools
+git
 
 # other mirrors 
 archlinuxcn-keyring
