@@ -50,9 +50,9 @@ set ignorecase
 " 保留撤销历史。Vim 会在编辑时保存操作历史，用来供用户撤消更改。默认情况下，操作记录只在本次编辑时有效，一旦编辑结束、文件关闭，操作历史就消失了。打开这个设置，可以在文件关闭后，操作记录保留在一个文件里面，继续存在。这意味着，重新打开一个文件，可以撤销上一次编辑时的操作。撤消文件是跟原文件保存在一起的隐藏文件，文件名以.un~开头。
 set undofile
 " 设置备份文件、交换文件、操作历史文件的保存位置。结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名。
-set backupdir=~/.vim/.backup//
-set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo//
+set backupdir=~/.cache/vim/backup//
+set directory=~/.cache/vim/swap//
+set undodir=~/.cache/vim/undo//
 " 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。该配置可以将工作目录自动切换到，正在编辑的文件的目录。需要创建好目录，不然会报错
 set autochdir
 " Vim 需要记住多少次历史操作。
