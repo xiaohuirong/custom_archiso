@@ -13,7 +13,7 @@ if [[ $CURSOR -lt ${#BUFFER} && $KEYMAP != vicmd ||
       $CURSOR -lt $((${#BUFFER} - 1)) ]]; then
   zle forward-char
 else
-  zle vi-forward-word
+  zle forward-word
 fi
 }
 zle -N autosuggest_partial_wordwise 
@@ -21,3 +21,4 @@ bindkey "${terminfo[kcuf1]}" autosuggest_partial_wordwise
 
 # Add autosuggest_partial_wordwise to IGNORE
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(autosuggest_partial_wordwise)
+
