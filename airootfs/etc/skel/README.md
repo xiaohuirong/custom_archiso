@@ -15,3 +15,4 @@
 # gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
 # gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
 # gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+# sudo systemctl start vncserver@:1.service
