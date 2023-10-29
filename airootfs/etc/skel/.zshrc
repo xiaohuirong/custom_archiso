@@ -120,5 +120,6 @@ zvm_after_init() {
     bindkey '^N' cmd_to_clip
     # autosuggestions 箭头移动单词, 不使用zsh-vi-mode可以不加因为其会自动读取
     source ~/.oh-my-zsh/custom/my_patches.zsh
+    source ~/.oh-my-zsh/custom/my_fzf.zsh
 }
 ########################

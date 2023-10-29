@@ -21,4 +21,3 @@ bindkey "${terminfo[kcuf1]}" autosuggest_partial_wordwise
 
 # Add autosuggest_partial_wordwise to IGNORE
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(autosuggest_partial_wordwise)
-
