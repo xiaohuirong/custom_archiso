@@ -9,9 +9,21 @@ export EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 export LANG=zh_CN.UTF-8
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_DIRS=/etc/xdg
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+
+export MOZ_USE_XINPUT2=1
+
+export WINIT_WAYLAND_CSD_THEME=Dark
+
 if [ "$1" = "wayfire" ]; then
     export MOZ_ENABLE_WAYLAND=1
+    export GVIM_ENABLE_WAYLAND=1
     export QT_QPA_PLATFORM="wayland;xcb"
+    export SDL_VIDEODRIVER=wayland
+    export XDG_CURRENT_DESKTOP=Wayfire
 fi
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
