@@ -32,6 +32,8 @@ xorg
 xfce4
 clipmenu
 rofi
+yaru-icon-theme
+gvfs-smb # for smb support
 
 # fonts
 ttf-lxgw-wenkai
