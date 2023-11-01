@@ -30,6 +30,8 @@ emptty
 spice-vdagent
 xorg
 xfce4
+clipmenu
+rofi
 
 # fonts
 ttf-lxgw-wenkai
@@ -42,3 +44,7 @@ uniclip-git
 
 # terminal
 #kitty
+
+# input method
+fcitx5-im
+fcitx5-chinese-addons

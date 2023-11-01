@@ -22,3 +22,7 @@
     max-height: var(--tab-max-height) !important;
   }
 } /* end media query */
+
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+  height: 2.7em;
+}

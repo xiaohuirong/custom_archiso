@@ -24,6 +24,8 @@ if [ "$1" = "wayfire" ]; then
     export QT_QPA_PLATFORM="wayland;xcb"
     export SDL_VIDEODRIVER=wayland
     export XDG_CURRENT_DESKTOP=Wayfire
+elif [ "$1" = "startxfce4" ]; then
+    /usr/bin/clipmenud &
 fi
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
