@@ -16,6 +16,7 @@ bat
 fzf
 useful-scripts-git
 uniclip-git
+downgrade
 
 
 # file system
@@ -25,3 +26,4 @@ compsize
 
 # AI
 python-pytorch
+

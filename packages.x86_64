@@ -169,6 +169,7 @@ rar
 unzip
 useful-scripts-git
 pueue
+downgrade
 
 # network tools
 rustscan

@@ -1,0 +1,16 @@
+# add archive source to pacman.conf
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Add archive source to pacman.conf
+When = PostTransaction
+Depends = sh
+Depends = coreutils
+Depends = grep
+Exec = /bin/sh -c 'sed -i "2i\Server = https://archive.archlinux.org/repos/$(date +%Y/%m/%d)/\$repo/os/\$arch" /etc/pacman.d/mirrorlist'
