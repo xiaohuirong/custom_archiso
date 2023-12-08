@@ -59,17 +59,19 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 
 ### functions ###
-wayfire-debug () {
-    export LANG=zh_CN.UTF-8
-    export GVIM_ENABLE_WAYLAND=1
-    export MOZ_ENABLE_WAYLAND=1
-    export QT_AUTO_SCREEN_SCALE_FACTOR=1
-    export QT_QPA_PLATFORMTHEME=qt5ct
-    export MOZ_USE_XINPUT2=1
-    export QT_QPA_PLATFORM="wayland;xcb"
-    export SESSION_MANAGER=
-    export NO_AT_BRIDGE=1
-    export GTK_A11Y=none 
+wayfire-debug() {
+    LANG=zh_CN.UTF-8 \
+    XDG_CURRENT_DESKTOP=Wayfire \
+    GVIM_ENABLE_WAYLAND=1 \
+    MOZ_ENABLE_WAYLAND=1 \
+    QT_AUTO_SCREEN_SCALE_FACTOR=1 \
+    QT_QPA_PLATFORMTHEME=qt5ct \
+    MOZ_USE_XINPUT2=1 \
+    QT_QPA_PLATFORM="wayland;xcb" \
+    SDL_VIDEODRIVER=wayland \
+    WINIT_WAYLAND_CSD_THEME=Dark \
+    GTK_THEME=Tokyonight-Storm-B \
+    QT_WAYLAND_DISABLE_WINDOWDECORATION=1 \
     wayfire
 }
 ########################
