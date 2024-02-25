@@ -191,6 +191,8 @@ emptty
 xorg
 xfce4
 tigervnc
+clipmenu
+rofi
 
 # wayfire
 wayfire-hoream-git
