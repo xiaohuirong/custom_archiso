@@ -1,17 +1,11 @@
 export PATH=$PATH:$HOME/.local/bin
 export ZSH="$HOME/.oh-my-zsh"
-export HISTSIZE="100000"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search copypath copyfile copybuffer history jsontools zsh-vi-mode)
 
 ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="gnzh"
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
+
 [ "$SSH_TTY" = "" -a "$XDG_SESSION_TYPE" = "tty" ] && ZSH_THEME="lukerandall" && LANG=en_US.UTF-8
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +119,13 @@ zvm_after_init() {
     source ~/.oh-my-zsh/custom/my_fzf.zsh
 }
 ########################
+
+export HISTSIZE=100000
+export SAVEHIST=100000
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
