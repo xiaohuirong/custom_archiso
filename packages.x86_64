@@ -171,6 +171,7 @@ useful-scripts-git
 archiso-hoream-git
 pueue
 downgrade
+totalmapper-git
 
 # network tools
 rustscan
@@ -263,6 +264,7 @@ vnote
 
 # grub
 grub-theme-vimix
+os-prober
 
 # install tool
 #calamares
