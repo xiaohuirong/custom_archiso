@@ -192,7 +192,14 @@ emptty
 # xfce
 xorg
 xfdesktop-hoream
-xfce4
+xfce4-panel
+xfce4-session
+xfce4-settings
+xfce4-terminal
+xfconf
+xfwm4
+xfwm4-themes
+thunar
 tigervnc
 clipmenu
 rofi
