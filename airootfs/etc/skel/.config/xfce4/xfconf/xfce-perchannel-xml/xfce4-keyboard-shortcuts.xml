@@ -56,11 +56,11 @@
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;h" type="string" value="xfce4-appfinder">
-        <property name="startup-notify" type="bool" value="true"/>
-      </property>
       <property name="&lt;Super&gt;j" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;u" type="string" value="thunar"/>
+      <property name="&lt;Super&gt;h" type="string" value="/home/arch/.config/rofi/launcher">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
       <property name="&lt;Alt&gt;e" type="string" value="env CM_LAUNCHER=rofi clipmenu"/>
     </property>
   </property>

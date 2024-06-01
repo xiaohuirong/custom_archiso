@@ -6,6 +6,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="org.qbittorrent.qBittorrent"/>
       <value type="string" value="org.xfce.Thunar"/>
+      <value type="string" value="xfce4-settings-helper"/>
     </property>
   </property>
 </channel>
