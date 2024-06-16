@@ -117,7 +117,6 @@ usbutils
 vim
 virtualbox-guest-utils-nox
 vpnc
-wezterm-terminfo
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -191,7 +190,6 @@ emptty
 
 # xfce
 xorg
-xfdesktop-hoream
 xfce4-panel
 xfce4-session
 xfce4-settings
@@ -199,6 +197,7 @@ xfce4-terminal
 xfconf
 xfwm4
 xfwm4-themes
+xfdesktop-hoream
 thunar
 tigervnc
 clipmenu
