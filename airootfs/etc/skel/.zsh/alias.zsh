@@ -48,7 +48,7 @@ alias crash-clean="ll -A /var/lib/systemd/coredump;sudo rm /var/lib/systemd/core
 alias crash-list="ll -A /var/lib/systemd/coredump"
 
 # duf
-alias duf="LANG=C.UTF-8 duf"
+alias duf="LANG=C.UTF-8 duf --hide-mp '/run/credentials/*'"
 
 # sysz
 alias sysz="LANG=C.UTF-8 sysz"
