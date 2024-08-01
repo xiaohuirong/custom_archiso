@@ -101,6 +101,9 @@ zvm_after_init() {
     source ~/.oh-my-zsh/custom/my_fzf.zsh
     source ~/.zsh/zoxide.zsh
     source ~/.zsh/funs.zsh
+
+    eval "$(atuin init zsh --disable-up-arrow)"
+    bindkey '^k' atuin-search
 }
 ########################
 

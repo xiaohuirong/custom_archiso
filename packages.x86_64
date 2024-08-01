@@ -172,6 +172,7 @@ pueue
 downgrade
 totalmapper-git
 zoxide
+atuin
 
 # network tools
 rustscan
