@@ -70,28 +70,10 @@ wayfire-debug() {
 }
 ########################
 
-### colorful command ###
-alias ip="ip -color=auto"
-export LESS='-R --use-color -Dd+r$Du+b'
-alias dmesg="dmesg --color=always"
-alias ping="grc ping"
-alias netstat="grc netstat"
-alias ps="grc ps"
-alias tail="grc tail"
-alias head="grc head"
-alias lspci="grc lspci"
-alias ifconfig="grc ifconfig"
-alias env="grc env"
-alias lsmod="grc lsmod"
-alias traceroute="grc traceroute"
-alias lsblk="grc lsblk"
-alias blkid="grc blkid"
-alias checkupdates="checkupdates | column -t | ccze -A"
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
-export MANROFFOPT="-P -c"
-alias bathelp='bat --plain --language=help'
-alias duf="LANG=C.UTF-8 duf"
+####### alias ##########
+source ~/.zsh/alias.zsh
 ########################
+
 
 ### 定义自动补全函数 ###
 _help_autocomplete() {
@@ -117,6 +99,8 @@ zvm_after_init() {
     # autosuggestions 箭头移动单词, 不使用zsh-vi-mode可以不加因为其会自动读取
     source ~/.oh-my-zsh/custom/my_patches.zsh
     source ~/.oh-my-zsh/custom/my_fzf.zsh
+    source ~/.zsh/zoxide.zsh
+    source ~/.zsh/funs.zsh
 }
 ########################
 
@@ -129,3 +113,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+
+######### proxy ########
+source ~/.zsh/proxy.zsh
+########################

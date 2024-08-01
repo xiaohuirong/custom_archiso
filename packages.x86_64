@@ -171,6 +171,7 @@ archiso-hoream-git
 pueue
 downgrade
 totalmapper-git
+zoxide
 
 # network tools
 rustscan
