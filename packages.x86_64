@@ -13,7 +13,6 @@ cloud-init
 cryptsetup
 darkhttpd
 ddrescue
-#dhclient
 dhcpcd
 diffutils
 dmidecode
@@ -40,7 +39,6 @@ hyperv
 intel-ucode
 irssi
 iw
-#iwd
 jfsutils
 kitty-terminfo
 less
@@ -89,7 +87,6 @@ pptpclient
 pv
 qemu-guest-agent
 refind
-#reflector
 reiserfsprogs
 rp-pppoe
 rsync
@@ -120,7 +117,6 @@ vpnc
 wireless-regdb
 wireless_tools
 wpa_supplicant
-#wvdial
 xfsprogs
 xl2tpd
 zsh

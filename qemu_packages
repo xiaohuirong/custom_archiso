@@ -30,6 +30,7 @@ emptty
 spice-vdagent
 xorg
 xfce4
+xfdesktop-hoream
 clipmenu
 rofi
 yaru-icon-theme
@@ -43,6 +44,9 @@ ttf-icomoon-feather
 
 # tools
 uniclip-git
+zoxide
+atuin
+eza
 
 # terminal
 #kitty
