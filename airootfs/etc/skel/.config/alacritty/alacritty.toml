@@ -1,0 +1,74 @@
+[colors.bright]
+black = "#7c7c7c"
+blue = "#b5dcfe"
+cyan = "#dfdffe"
+green = "#1aed8c"
+magenta = "#ff9cfe"
+red = "#ffb6b0"
+white = "#ffffff"
+yellow = "#ffffcb"
+
+[colors.cursor]
+cursor = "#a3a3a3"
+text = "#232323"
+
+[colors.normal]
+black = "#4e4e4e"
+blue = "#237ad5"
+cyan = "#c6c5fe"
+green = "#1aed8c"
+magenta = "#ff73fd"
+red = "#ff6c60"
+white = "#eeeeee"
+yellow = "#ffffb6"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "O"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "I"
+mods = "Shift|Alt"
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mode = "~Vi"
+mouse = "Middle"
+
+[window]
+decorations = "None"
+decorations_theme_variant = "Dark"
+opacity = 0.75
+
+[window.dimensions]
+columns = 120
+lines = 35
