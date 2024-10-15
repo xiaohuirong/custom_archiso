@@ -54,3 +54,10 @@ eza
 # input method
 fcitx5-im
 fcitx5-chinese-addons
+
+# custom
+kvantum
+kvantum-qt5
+adw-gtk-theme
+xdg-desktop-portal-gtk
+firefox-gnome-theme

@@ -220,9 +220,8 @@ wl-color-picker
 wl-screenrec-git
 grim
 slurp
-#xdg-desktop-portal 
 xdg-desktop-portal-wlr
-#xdg-desktop-portal-gtk 
+xdg-desktop-portal-gtk 
 
 # software
 firefox
@@ -240,6 +239,7 @@ fcitx5-chinese-addons
 extra/qt5ct
 qt6ct
 kvantum
+kvantum-qt5
 xdg-user-dirs
 file-roller
 ark
@@ -278,4 +278,3 @@ spice-vdagent
 ############### custom ###############
 adw-gtk-theme
 firefox-gnome-theme
-xdg-desktop-portal-gtk
