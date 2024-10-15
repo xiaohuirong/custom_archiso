@@ -221,6 +221,7 @@ wl-screenrec-git
 grim
 slurp
 xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
 
 # software
 firefox
@@ -277,7 +278,6 @@ spice-vdagent
 ############### custom ###############
 adw-gtk-theme
 firefox-gnome-theme
-xdg-desktop-portal-gtk
 eza
 yaru-icon-theme
 libnotify
