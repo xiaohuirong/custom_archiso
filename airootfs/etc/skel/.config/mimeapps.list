@@ -1,3 +1,7 @@
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 inode/directory=org.gnome.Nautilus.desktop
+image/png=org.gnome.Loupe.desktop
+
+[Added Associations]
+image/png=org.gnome.Loupe.desktop;
