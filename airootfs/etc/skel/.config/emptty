@@ -39,5 +39,5 @@ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
 gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
 
-exec dbus-launch $@
+exec dbus-launch $@ > "~/.cache/$@.log" 2>&1
 
