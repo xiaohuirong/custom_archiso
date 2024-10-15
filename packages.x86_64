@@ -202,8 +202,8 @@ rofi
 # wayfire
 wayfire-hoream-git
 wayfire-plugins-extra-hoream-git
-wf-shell-hoream-git
-wcm-hoream-git
+#wf-shell-hoream-git
+#wcm-hoream-git
 wf-info-hoream-git
 waybar-lily
 mako
@@ -221,7 +221,6 @@ wl-screenrec-git
 grim
 slurp
 xdg-desktop-portal-wlr
-xdg-desktop-portal-gtk 
 
 # software
 firefox
@@ -236,7 +235,7 @@ qt6-wayland
 qt5-wayland
 fcitx5-im
 fcitx5-chinese-addons
-extra/qt5ct
+qt5ct
 qt6ct
 kvantum
 kvantum-qt5
@@ -278,3 +277,8 @@ spice-vdagent
 ############### custom ###############
 adw-gtk-theme
 firefox-gnome-theme
+xdg-desktop-portal-gtk 
+eza
+yaru-icon-theme
+libnotify
+zoxide

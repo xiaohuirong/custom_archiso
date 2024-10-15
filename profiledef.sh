@@ -40,4 +40,6 @@ file_permissions=(
   ["/etc/skel/.config/eww/dashboard/scripts/sys_info"]="0:0:755"
   ["/etc/skel/.config/eww/dashboard/scripts/upgrade_pkgs"]="0:0:755"
   ["/etc/skel/.config/eww/dashboard/scripts/weather_info"]="0:0:755"
+  ["/etc/skel/.config/rofi/launcher"]="0:0:755"
+  ["/etc/skel/.local/bin/toggle_theme.sh"]="0:0:755"
 )
