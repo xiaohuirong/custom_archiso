@@ -13,4 +13,5 @@
     "modules-left": ["custom/logo", "wlr/taskbar"],
 
     "include": ["~/.config/waybar/modules/base"],
-}
+}]
+
