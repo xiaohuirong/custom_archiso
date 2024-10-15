@@ -277,7 +277,7 @@ spice-vdagent
 ############### custom ###############
 adw-gtk-theme
 firefox-gnome-theme
-xdg-desktop-portal-gtk 
+xdg-desktop-portal-gtk
 eza
 yaru-icon-theme
 libnotify
