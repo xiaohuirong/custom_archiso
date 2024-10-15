@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=亮色/暗色 切换
+Comment=
+Exec=/home/arch/.local/bin/toggle_theme.sh
+Icon=preferences-color
+Path=/home/arch
+Terminal=false
+StartupNotify=true

@@ -2,8 +2,7 @@
 Selection=true
 
 export BROWSER=firefox
-#export GTK_THEME=Adwaita:dark
-export GTK_THEME=Adwaita-dark
+#export GTK_THEME=Adwaita-dark
 #export GTK_THEME=Tokyonight-Storm-B
 export EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
@@ -29,7 +28,7 @@ elif [ "$1" = "startxfce4" ]; then
     /usr/bin/xrandr --output Virtual-1 --auto
 fi
 
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+#gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface font-name "DejaVuSansM Nerd Font Mono Regular 14"
 gsettings set org.gnome.desktop.interface cursor-theme "oreo_pink_cursors"
 gsettings set org.gnome.desktop.interface cursor-size "25"

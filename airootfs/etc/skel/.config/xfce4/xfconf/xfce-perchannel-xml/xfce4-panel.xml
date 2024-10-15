@@ -4,7 +4,7 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
+    <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="double" value="100"/>
@@ -22,6 +22,7 @@
         <value type="int" value="11"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
+        <value type="int" value="8"/>
         <value type="int" value="7"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
@@ -76,7 +77,14 @@
       <property name="show-handle" type="bool" value="false"/>
       <property name="grouping" type="bool" value="true"/>
       <property name="include-all-workspaces" type="bool" value="true"/>
+      <property name="flat-buttons" type="bool" value="false"/>
     </property>
     <property name="plugin-7" type="string" value="showdesktop"/>
+    <property name="plugin-8" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17289759781.desktop"/>
+      </property>
+      <property name="show-label" type="bool" value="false"/>
+    </property>
   </property>
 </channel>

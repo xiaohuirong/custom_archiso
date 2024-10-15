@@ -276,3 +276,5 @@ os-prober
 spice-vdagent
 
 ############### custom ###############
+adw-gtk-theme
+firefox-gnome-theme
