@@ -1,0 +1,15 @@
+{
+    "custom/screenkbd": {
+        "format": "{}{icon}",
+        "exec": "~/.local/bin/screen-keyboard.sh --update-info",
+        "return-type": "json",
+        "interval": "once",
+        "format-icons": {
+            "on": "󰌌",
+            "off": "󰌐",
+        },
+        "on-click": "~/.local/bin/screen-keyboard.sh --run",
+        "exec-on-event": false,
+        "signal": 9
+    }
+}

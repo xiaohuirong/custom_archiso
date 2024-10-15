@@ -1,0 +1,27 @@
+{
+    "network#wifi": {
+        "interface": "wlp2s0",
+        "interval": 3,
+        "format": "󰤭",
+        "format-wifi": "󱚽",
+        "format-disconnected": "󰤭", //An empty format will hide the module.
+        // "tooltip-format-wifi": "󱚽 {essid}@{frequency}GHz ({signalStrength}%)\n󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}\n󱇢 {gwaddr} ",
+        "tooltip-format-wifi": "󱚽 {essid}@{frequency}GHz ({signalStrength}%)\n󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center wifi",
+        "on-click-right": "nm-connection-editor",
+    },
+
+    "network#ethernet": {
+        "interface": "ppp0",
+        "interval": 3,
+        "format": "󰈂",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰈂", //An empty format will hide the module.
+        // "tooltip-format-ethernet": "󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}\n󱇢 {gwaddr} ",
+        "tooltip-format-ethernet": "󰦘 {bandwidthUpBytes}    󰦗 {bandwidthDownBytes}\n󰩟 {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center network",
+        "on-click-right": "nm-connection-editor",
+    }
+}

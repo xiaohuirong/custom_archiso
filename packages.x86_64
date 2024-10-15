@@ -203,6 +203,8 @@ rofi
 wayfire-hoream-git
 wayfire-plugins-extra-hoream-git
 wayfire-firedecor-hoream-git
+gammastep
+wvkbd
 #wf-shell-hoream-git
 #wcm-hoream-git
 wf-info-hoream-git
@@ -210,7 +212,7 @@ waybar-lily
 mako
 wl-clipboard
 uniclip-git
-clipman
+cliphist
 swaybg
 alacritty
 wofi

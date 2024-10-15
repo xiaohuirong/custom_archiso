@@ -1,0 +1,15 @@
+{
+    "battery": {
+        "format": "{capacity}",
+        // "format-icons": ["", "", "", ""],
+        "format-charging": "{capacity}",
+        "interval": 30,
+        "on-click": "gnome-control-center power",
+        "states": {
+            "full": 100,
+            "closefull": 99,
+            "warning": 45,
+            "critical": 20
+        }
+    },
+}

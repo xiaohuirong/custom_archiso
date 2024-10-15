@@ -1,0 +1,15 @@
+{
+    "custom/wlsunset": {
+        "format": "{}{icon}",
+        "exec": "~/.local/bin/waybar-wlsun-set.sh --update-info",
+        "return-type": "json",
+        "interval": "once",
+        "format-icons": {
+            "on": "",
+            "off": "",
+        },
+        "on-click": "~/.local/bin/waybar-wlsun-set.sh --toggle",
+        "exec-on-event": false,
+        "signal": 10
+    }
+}

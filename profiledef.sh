@@ -42,4 +42,9 @@ file_permissions=(
   ["/etc/skel/.config/eww/dashboard/scripts/weather_info"]="0:0:755"
   ["/etc/skel/.config/rofi/launcher"]="0:0:755"
   ["/etc/skel/.local/bin/toggle_theme.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/screen-cast.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/screen-keyboard.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/screen-shot.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/waybar-wlsun-set.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/cliphist-rofi-img"]="0:0:755"
 )

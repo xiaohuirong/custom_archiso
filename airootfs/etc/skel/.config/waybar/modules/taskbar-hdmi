@@ -1,0 +1,17 @@
+{
+    "wlr/taskbar": {
+       "format": "{icon}",
+       "icon-size": 27,
+       // "icon-theme": "Yaru",
+       "tooltip-format": "{title}",
+       "on-click": "activate",
+       "on-click-middle": "close",
+       "on-click-right": "minimize",
+       "ignore-list": [ 
+           "wofi" 
+       ], 
+       "app_ids-mapping": {
+         "firefoxdeveloperedition": "firefox-developer-edition"
+       }
+    }
+}

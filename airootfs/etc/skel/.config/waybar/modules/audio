@@ -1,0 +1,21 @@
+{
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt-click": "click-right",
+        "format-bluetooth": "󰗾",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "󰋍",
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "{volume}\n左键打开pavucontrol\n右键打开helvum",
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "helvum",
+        "states": {
+            "low": 0,
+            "mid":50,
+            "high": 75
+        }
+    }
+}

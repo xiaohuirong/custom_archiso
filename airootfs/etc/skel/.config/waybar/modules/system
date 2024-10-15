@@ -1,0 +1,45 @@
+{
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛",
+        "format-alt-click": "click-right",
+        "on-click": "~/.config/waybar/custom/stats.sh",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "",
+        "tooltip-format": "{used:0.1f}G used\n{avail:0.1f}G available\n{total:0.1f}G total",
+        "format-alt-click": "click-right",
+        "on-click": "~/.config/waybar/custom/stats.sh",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "",
+        "format-alt-click": "click-right",
+        "tooltip-format": "{used} used\n{free} free\n{total} total",
+        "on-click": "~/.config/waybar/custom/disk_stats.sh",
+        "path": "/",
+        "states": {
+            "low": 0,
+            "mid": 25,
+            "high": 50
+        }
+    },
+
+    "temperature": {
+        "format": "",
+        "critical-threshold": 80
+    }
+}

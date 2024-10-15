@@ -1,0 +1,17 @@
+{
+    "custom/screen-cast": {
+        "format": "{}{icon}",
+        "exec": "~/.local/bin/screen-cast.sh --update-info",
+        "return-type": "json",
+        "interval": "once",
+        "format-icons": {
+            "on": "󱝉",
+            "off": "󰀟",
+        },
+        "on-click": "~/.local/bin/screen-cast.sh --toggle --window",
+        "on-click-right": "~/.local/bin/screen-cast.sh --toggle --select",
+        "on-click-middle": "~/.local/bin/screen-cast.sh --toggle --full",
+        "exec-on-event": false,
+        "signal": 11
+    }
+}

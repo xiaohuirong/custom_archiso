@@ -1,0 +1,8 @@
+{
+    "custom/logo": {
+        "format": "{icon}",
+        "format-icons": "",
+        "on-click-right": "~/Scripts/launcher.sh",
+        "on-click": "wtype -s 50 -k super_r",
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "custom/mpris": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": "󰏥",
+            "Paused": "󰐌",
+        },
+        "exec": "playerctl -a metadata -p musicfox,yesplaymusic,io.bassi.Amberol,kew --format '{\"tooltip\": \"󰐌 {{playerName}}\\n󰎆 {{markup_escape(title)}}\\n󰀥 {{markup_escape(album)}}\\n󰀉 {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause -p musicfox,yesplaymusic,io.bassi.Amberol,kew",
+        "on-click-right": "playerctl next -p musicfox,yesplaymusic,io.bassi.Amberol,kew", 
+    },
+
+    "custom/next": {
+        "format": "{icon}",
+        "format-icons": "󰙡",
+        "on-click": "playerctl next -p musicfox,yesplaymusic,io.bassi.Amberol,kew"
+    },
+
+    "custom/previous": {
+        "format": "{icon}",
+        "format-icons": "󰙣",
+        "on-click": "playerctl previous -p musicfox,yesplaymusic,io.bassi.Amberol,kew"
+    }
+}

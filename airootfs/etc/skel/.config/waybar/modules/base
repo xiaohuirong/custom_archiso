@@ -1,0 +1,17 @@
+{
+
+    "include": ["~/.config/waybar/modules/network", 
+                "~/.config/waybar/modules/taskbar",
+                "~/.config/waybar/modules/clock",
+                "~/.config/waybar/modules/logo",
+                "~/.config/waybar/modules/battery",
+                "~/.config/waybar/modules/bluetooth",
+                "~/.config/waybar/modules/mpris",
+                "~/.config/waybar/modules/screenkbd",
+                "~/.config/waybar/modules/wlsunset",
+                "~/.config/waybar/modules/screen-cast",
+                "~/.config/waybar/modules/blacklight",
+                "~/.config/waybar/modules/audio",
+                "~/.config/waybar/modules/system",
+                "~/.config/waybar/modules/tray"]
+}
