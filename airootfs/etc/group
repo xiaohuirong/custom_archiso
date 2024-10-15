@@ -2,4 +2,7 @@ root:x:0:root
 adm:x:4:arch
 wheel:x:10:arch
 uucp:x:14:arch
+video:x:998:arch
+i2c:x:956:xiao
+input:x:994:xiao
 arch:x:1000:
