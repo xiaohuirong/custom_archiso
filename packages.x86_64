@@ -278,3 +278,4 @@ spice-vdagent
 ############### custom ###############
 adw-gtk-theme
 firefox-gnome-theme
+xdg-desktop-portal-gtk
