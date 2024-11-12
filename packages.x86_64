@@ -128,7 +128,7 @@ archoream-keyring
 
 # drivers
 linux-firmware
-intel-media-driver
+#intel-media-driver
 
 # network
 networkmanager
@@ -156,9 +156,9 @@ jq
 pacman-contrib
 cpufetch
 cpu-x
-gpu-viewer
+#gpu-viewer
 ripgrep
-lazygit
+#lazygit
 unzip
 useful-scripts-git
 archiso-hoream-git
@@ -169,7 +169,7 @@ zoxide
 atuin
 
 # network tools
-rustscan
+# rustscan
 
 # font
 ttf-lxgw-wenkai
@@ -256,15 +256,15 @@ pipewire-pulse
 pavucontrol
 helvum
 zenity
-neovim
+#neovim
 gparted
 konsole
 #kitty
 kdeconnect
 flameshot
-foot
-mpd
-go-musicfox-git
+#foot
+#mpd
+#go-musicfox-git
 #okular
 #evince
 #vnote
