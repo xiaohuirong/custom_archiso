@@ -259,15 +259,15 @@ zenity
 neovim
 gparted
 konsole
-kitty
+#kitty
 kdeconnect
 flameshot
 foot
 mpd
 go-musicfox-git
-okular
+#okular
 evince
-vnote
+#vnote
 
 # grub
 grub-theme-vimix
