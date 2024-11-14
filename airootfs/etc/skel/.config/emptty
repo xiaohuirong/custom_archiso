@@ -17,14 +17,16 @@ export MOZ_USE_XINPUT2=1
 
 export WINIT_WAYLAND_CSD_THEME=Dark
 
-if [ "$1" = "wayfire" ]; then
+name=$(basename "$1")
+
+if [ "$name" = "wayfire" ]; then
     export MOZ_ENABLE_WAYLAND=1
     export GVIM_ENABLE_WAYLAND=1
     export QT_QPA_PLATFORM="wayland;xcb"
     export SDL_VIDEODRIVER=wayland
     export XDG_CURRENT_DESKTOP=Wayfire
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-elif [ "$1" = "startxfce4" ]; then
+elif [ "$name" = "startxfce4" ]; then
     /usr/bin/clipmenud &
     /usr/bin/xrandr --output Virtual-1 --auto
 fi
@@ -39,5 +41,5 @@ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
 gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
 
-exec dbus-launch $@ > ~/.cache/$@.log 2>&1
+exec dbus-launch $@ > ~/.cache/$name.log 2>&1
 

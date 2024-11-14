@@ -62,7 +62,7 @@ VERTICAL_SELECTION=false
 #ENABLE_NUMLOCK=false
 
 # Defines the way, how is logging of session errors handled. Possible values are "rotate", "appending" or "disabled".
-#SESSION_ERROR_LOGGING=disabled
+SESSION_ERROR_LOGGING=enabled
 
 # Overrides path of session errors log file
 #SESSION_ERROR_LOGGING_FILE=/var/log/emptty/session-errors.[TTY_NUMBER].log
