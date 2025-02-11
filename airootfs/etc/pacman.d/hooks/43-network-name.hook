@@ -1,0 +1,11 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Type = Package
+Target = coreutils
+
+[Action]
+Description = Use traditional network interface name
+When = PostTransaction
+Depends = coreutils
+Exec = /usr/bin/mkdir -p /etc/udev/rules.d; /usr/bin/ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
