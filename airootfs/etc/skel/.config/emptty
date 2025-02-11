@@ -40,6 +40,8 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal "xfce4
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
 gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
+gsettings set org.gnome.desktop.interface cursor-size 32
+gsettings set org.gnome.desktop.interface icon-theme Adwaita
 
 exec dbus-launch $@ > ~/.cache/$name.log 2>&1
 
