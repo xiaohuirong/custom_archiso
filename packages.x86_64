@@ -87,7 +87,6 @@ pptpclient
 pv
 qemu-guest-agent
 refind
-reiserfsprogs
 rp-pppoe
 rsync
 rxvt-unicode-terminfo
@@ -137,6 +136,7 @@ ppp
 # tools
 git
 btop
+htop
 net-tools
 fastfetch
 totalmapper-git
@@ -226,6 +226,7 @@ grim
 slurp
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
+wayland-logout
 
 # software
 firefox
@@ -283,7 +284,6 @@ spice-vdagent
 adw-gtk-theme
 firefox-gnome-theme
 eza
-yaru-icon-theme
 libnotify
 zoxide
 pcmanfm-qt

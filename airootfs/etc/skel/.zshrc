@@ -66,7 +66,7 @@ wayfire-debug() {
     WINIT_WAYLAND_CSD_THEME=Dark \
     GTK_THEME=Tokyonight-Storm-B \
     QT_WAYLAND_DISABLE_WINDOWDECORATION=1 \
-    wayfire
+    /opt/wayfire-hoream/bin/wayfire > ~/.cache/wayfire.log 2>&1
 }
 ########################
 
