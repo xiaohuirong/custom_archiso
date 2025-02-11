@@ -27,8 +27,12 @@ if [ "$name" = "wayfire" ]; then
     export XDG_CURRENT_DESKTOP=Wayfire
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 elif [ "$name" = "startxfce4" ]; then
-    /usr/bin/clipmenud &
-    /usr/bin/xrandr --output Virtual-1 --auto
+    if [ "$2" = "--wayland" ]; then
+        arg="/opt/wayfire-hoream/bin/wayfire -c /home/arch/.config/wayfire-xfce4.ini"
+    else
+        /usr/bin/clipmenud &
+        /usr/bin/xrandr --output Virtual-1 --auto
+    fi
 fi
 
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
@@ -43,5 +47,5 @@ gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
 gsettings set org.gnome.desktop.interface cursor-size 32
 gsettings set org.gnome.desktop.interface icon-theme Adwaita
 
-exec dbus-launch $@ > ~/.cache/$name.log 2>&1
+exec dbus-launch $@ $arg > ~/.cache/$name.log 2>&1
 
