@@ -286,7 +286,7 @@ firefox-gnome-theme
 eza
 libnotify
 zoxide
-pcmanfm-qt
+#pcmanfm-qt
 loupe
 wev
 
