@@ -1,6 +1,6 @@
 {
     "network#wifi": {
-        "interface": "wlp2s0",
+        "interface": "wlan0",
         "interval": 3,
         "format": "󰤭",
         "format-wifi": "󱚽",
@@ -13,7 +13,7 @@
     },
 
     "network#ethernet": {
-        "interface": "ppp0",
+        "interface": "eth0",
         "interval": 3,
         "format": "󰈂",
         "format-ethernet": "󰈀",

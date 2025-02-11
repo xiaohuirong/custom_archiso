@@ -8,4 +8,4 @@ Target = coreutils
 Description = Use traditional network interface name
 When = PostTransaction
 Depends = coreutils
-Exec = /usr/bin/mkdir -p /etc/udev/rules.d; /usr/bin/ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+Exec = /bin/sh -c "mkdir -p /etc/udev/rules.d && ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules"
