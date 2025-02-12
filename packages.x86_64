@@ -119,6 +119,7 @@ wpa_supplicant
 xfsprogs
 xl2tpd
 zsh
+fish
 
 ############### custom ###############
 # keyrings
