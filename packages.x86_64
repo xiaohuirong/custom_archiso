@@ -168,6 +168,8 @@ downgrade
 totalmapper-git
 zoxide
 atuin
+iperf3
+httping
 
 # network tools
 # rustscan
