@@ -4,6 +4,7 @@ Selection=true
 export BROWSER=firefox
 #export GTK_THEME=Adwaita-dark
 #export GTK_THEME=Tokyonight-Storm-B
+export GTK_THEME=adw-gtk3-dark
 export EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 export LANG=zh_CN.UTF-8
@@ -20,20 +21,26 @@ export WINIT_WAYLAND_CSD_THEME=Dark
 name=$(basename "$1")
 
 if [ "$name" = "wayfire" ]; then
+    wayland="true"
+elif [ "$name" = "startxfce4" ]; then
+    if [ "$2" = "--wayland" ]; then
+        wayland="true"
+        arg="/opt/wayfire-hoream/bin/wayfire -c /home/arch/.config/wayfire-xfce4.ini"
+    fi
+fi
+
+if [ "$wayland" = "true" ]; then
     export MOZ_ENABLE_WAYLAND=1
     export GVIM_ENABLE_WAYLAND=1
     export QT_QPA_PLATFORM="wayland;xcb"
     export SDL_VIDEODRIVER=wayland
     export XDG_CURRENT_DESKTOP=Wayfire
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-elif [ "$name" = "startxfce4" ]; then
-    if [ "$2" = "--wayland" ]; then
-        arg="/opt/wayfire-hoream/bin/wayfire -c /home/arch/.config/wayfire-xfce4.ini"
-    else
-        /usr/bin/clipmenud &
-        /usr/bin/xrandr --output Virtual-1 --auto
-    fi
+else
+    /usr/bin/clipmenud &
+    /usr/bin/xrandr --output Virtual-1 --auto
 fi
+
 
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface font-name "DejaVuSansM Nerd Font Mono Regular 14"
@@ -44,7 +51,6 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal "xfce4
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor editor-font "DejaVuSansM Nerd Font Mono 16"
 gsettings set org.gnome.gedit.preferences.editor scheme "solarized-light"
-gsettings set org.gnome.desktop.interface cursor-size 32
 gsettings set org.gnome.desktop.interface icon-theme Adwaita
 
 exec dbus-launch $@ $arg > ~/.cache/$name.log 2>&1
