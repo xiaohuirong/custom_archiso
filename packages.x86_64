@@ -293,3 +293,6 @@ wev
 
 nm-connection-editor
 network-manager-applet
+intel-media-driver
+vulkan-radeon
+vulkan-intel

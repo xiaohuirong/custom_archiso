@@ -49,5 +49,6 @@ file_permissions=(
   ["/etc/skel/.local/bin/cliphist-rofi-img"]="0:0:755"
   ["/etc/skel/.local/bin/wob.sh"]="0:0:755"
   ["/etc/skel/.local/bin/light.sh"]="0:0:755"
+  ["/etc/skel/.local/bin/audio.sh"]="0:0:755"
   ["/etc/skel/.config/emptty"]="0:0:755"
 )
