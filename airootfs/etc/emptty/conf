@@ -11,10 +11,10 @@ PRINT_ISSUE=true
 PRINT_MOTD=true
 
 # Preselected user, if AUTOLOGIN is enabled, this user is logged in.
-#DEFAULT_USER=user
+DEFAULT_USER=arch
 
 # Enables Autologin, if DEFAULT_USER is defined and part of nopasswdlogin group. Possible values are "true" or "false".
-AUTOLOGIN=false
+AUTOLOGIN=true
 
 # The default session used, if Autologin is enabled. If session is not found in list of session, it proceeds to manual selection.
 # AUTOLOGIN_SESSION=i3
