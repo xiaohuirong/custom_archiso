@@ -1,1 +1,7 @@
-/opt/wayfire-hoream/share/applications/wayfire-config-manager.desktop
+[Desktop Entry]
+Name=Wayfire Config Manager
+Comment=Configure Wayfire Settings
+Exec=/opt/wayfire-hoream/bin/wcm
+Icon=/opt/wayfire-hoream/share/icons/hicolor/scalable/apps/wayfire.svg
+Type=Application
+Categories=Utility;

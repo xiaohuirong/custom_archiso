@@ -91,7 +91,7 @@ alias bathelp='bat --plain --language=help'
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON"
 
 #cp 
-alias cp="cp --reflink=always -i"
+alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 

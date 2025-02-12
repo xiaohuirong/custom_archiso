@@ -1,1 +1,12 @@
-/opt/wayfire-hoream/share/applications/network.cycles.wdisplays.desktop
+[Desktop Entry]
+Type=Application
+Categories=GTK;Settings;DesktopSettings;
+Exec=/opt/wayfire-hoream/bin/wdisplays
+Icon=/opt/wayfire-hoream/share/icons/hicolor/scalable/apps/network.cycles.wdisplays.svg
+
+Name=Displays
+GenericName=Displays configuration
+Comment=wlroots displays configuration
+Name[it]=Schermi
+GenericName[it]=Impostazioni degli schermi
+Comment[it]=Impostazioni degli schermi per wlroots
