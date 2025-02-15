@@ -4,6 +4,9 @@ if status is-interactive
     set -g fish_key_bindings fish_vi_key_bindings
     set -g fish_greeting
 
+    # Add ~/.local/bin to PATH
+    set -U fish_user_paths ~/.local/bin $fish_user_paths
+
     # Emulates vim's cursor shape behavior
     # Set the normal and visual mode cursors to a block
     set fish_cursor_default block
