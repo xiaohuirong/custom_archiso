@@ -1,0 +1,27 @@
+bindings {
+    escape quit
+    q quit
+    u undo
+    n reset
+    e left-click
+    return left-click
+    r right-click
+
+    h cut-left
+    j cut-down
+    k cut-up
+    l cut-right
+
+    left scroll-left
+    down scroll-down
+    up scroll-up
+    right scroll-right
+
+    shift+h move-left
+    shift+j move-down
+    shift+k move-up
+    shift+l move-right
+
+    alt+j left-press
+    alt+k left-release
+}

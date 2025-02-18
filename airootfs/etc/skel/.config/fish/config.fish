@@ -21,4 +21,7 @@ if status is-interactive
     # The following variable can be used to configure cursor shape in
     # visual mode, but due to fish_cursor_default, is redundant here
     set fish_cursor_visual block
+
+    # show full path
+    set fish_prompt_pwd_dir_length 0
 end
