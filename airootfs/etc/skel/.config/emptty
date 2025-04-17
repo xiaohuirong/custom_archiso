@@ -35,10 +35,16 @@ if [ "$wayland" = "true" ]; then
     export QT_QPA_PLATFORM="wayland;xcb"
     export SDL_VIDEODRIVER=wayland
     export XDG_CURRENT_DESKTOP=Wayfire
-    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 else
     /usr/bin/clipmenud &
     /usr/bin/xrandr --output Virtual-1 --auto
+fi
+
+if [ "$name" = "$1" ]; then
+    export LD_LIBRARY_PATH=/usr/lib
+    unset GTK_IM_MODULE
+else
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 fi
 
 
