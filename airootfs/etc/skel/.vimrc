@@ -91,5 +91,8 @@ set ttyfast
 
 call plug#begin()
 Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'lambdalisue/vim-suda'
 call plug#end()
+
+let g:suda_smart_edit = 1
 
