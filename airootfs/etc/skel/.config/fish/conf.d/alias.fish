@@ -43,7 +43,6 @@ alias lsmod="grc lsmod"
 alias traceroute="grc traceroute"
 alias lsblk="grc lsblk"
 alias blkid="grc blkid"
-alias checkupdates="checkupdates | column -t | ccze -A"
 alias bathelp='bat --plain --language=help'
 
 #let nvim can find cmake project headerfile
