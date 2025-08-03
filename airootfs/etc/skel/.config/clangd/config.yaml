@@ -1,0 +1,6 @@
+Hover:
+  ShowAKA: Yes
+Diagnostics:
+  UnusedIncludes: Strict
+CompileFlags:
+  Add: [-std=c++20]
